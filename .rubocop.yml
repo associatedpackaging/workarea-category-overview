@@ -1,8 +1,2 @@
-inherit_from: .rails-rubocop.yml
-
-AllCops:
-  TargetRubyVersion: 2.4
-  Exclude:
-    - 'test/dummy/**/*'
-    - 'lib/category_overview_content_block.rb'
-    - 'lib/category_overview_content_block/**/*'
+inherit_from:
+  - https://raw.githubusercontent.com/workarea-commerce/workarea/master/.rubocop.yml

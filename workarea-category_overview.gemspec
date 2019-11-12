@@ -16,4 +16,5 @@ Gem::Specification.new do |s|
   s.files = `git ls-files`.split("\n")
 
   s.add_dependency "workarea", "~> 3.x"
+  s.license = 'Business Software License'
 end
