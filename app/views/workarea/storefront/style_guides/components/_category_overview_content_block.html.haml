@@ -1,0 +1,116 @@
+#category-overview-content-block.style-guide__subsection
+
+  %h3= link_to_style_guide('components', 'category_overview_content_block')
+
+  %p A content block that combines taxonomy with content to deliver a rich overview of subcategories
+
+  %p Should display an <strong>image to the left</strong>:
+  .style-guide__example-block
+    .category-overview-content-block
+      .grid
+        - (1..4).each do |i|
+          .grid__cell.grid__cell--50-at-medium.grid__cell--25-at-wide
+            .category-overview-content-block__container.category-overview-content-block__container--image.category-overview-content-block__container--image-left
+              = image_tag 'workarea/core/placeholder.png', size: '100x100', class: 'category-overview-content-block__image', role: 'presentation'
+
+            .category-overview-content-block__container.category-overview-content-block__container--content
+              %span.category-overview-content-block__heading Heading text
+              %ul.category-overview-content-block__menu
+                - (1..5).each do |i|
+                  %li.category-overview-content-block__menu-item
+                    - if i.even?
+                      Taxon #{i}
+                    - else
+                      = link_to "Taxon #{i}", '#', class: 'taxonomy-content-block__menu-link'
+
+  %p Should display an <strong>image above</strong>:
+  .style-guide__example-block
+    .category-overview-content-block
+      .grid
+        - (1..4).each do |i|
+          .grid__cell.grid__cell--50-at-medium.grid__cell--25-at-wide
+            .category-overview-content-block__container.category-overview-content-block__container--image.category-overview-content-block__container--image-top
+              = image_tag 'workarea/core/placeholder.png', size: '100x100', class: 'category-overview-content-block__image', role: 'presentation'
+
+            .category-overview-content-block__container.category-overview-content-block__container--content
+              %span.category-overview-content-block__heading Heading text
+              %ul.category-overview-content-block__menu
+                - (1..5).each do |i|
+                  %li.category-overview-content-block__menu-item
+                    - if i.even?
+                      Taxon #{i}
+                    - else
+                      = link_to "Taxon #{i}", '#', class: 'taxonomy-content-block__menu-link'
+
+  %p Should support <strong>no image</strong>:
+  .style-guide__example-block
+    .category-overview-content-block
+      .grid
+        - (1..4).each do |i|
+          .grid__cell.grid__cell--50-at-medium.grid__cell--25-at-wide
+            .category-overview-content-block__container.category-overview-content-block__container--content
+              %span.category-overview-content-block__heading Heading text
+              %ul.category-overview-content-block__menu
+                - (1..5).each do |i|
+                  %li.category-overview-content-block__menu-item
+                    - if i.even?
+                      Taxon #{i}
+                    - else
+                      = link_to "Taxon #{i}", '#', class: 'taxonomy-content-block__menu-link'
+
+  %p Should display 1 column:
+  .style-guide__example-block
+    .category-overview-content-block
+      .grid
+        .grid__cell.grid__cell--50-at-medium.grid__cell--25-at-wide
+          .category-overview-content-block__container.category-overview-content-block__container--image.category-overview-content-block__container--image-left
+            = image_tag 'workarea/core/placeholder.png', size: '100x100', class: 'category-overview-content-block__image', role: 'presentation'
+
+          .category-overview-content-block__container.category-overview-content-block__container--content
+            %span.category-overview-content-block__heading Heading text
+            %ul.category-overview-content-block__menu
+              - (1..5).each do |i|
+                %li.category-overview-content-block__menu-item
+                  - if i.even?
+                    Taxon #{i}
+                  - else
+                    = link_to "Taxon #{i}", '#', class: 'taxonomy-content-block__menu-link'
+
+  %p Should display 2 columns:
+  .style-guide__example-block
+    .category-overview-content-block
+      .grid
+        - 2.times do |i|
+          .grid__cell.grid__cell--50-at-medium.grid__cell--25-at-wide
+            .category-overview-content-block__container.category-overview-content-block__container--image.category-overview-content-block__container--image-left
+              = image_tag 'workarea/core/placeholder.png', size: '100x100', class: 'category-overview-content-block__image', role: 'presentation'
+
+            .category-overview-content-block__container.category-overview-content-block__container--content
+              %span.category-overview-content-block__heading Heading text
+              %ul.category-overview-content-block__menu
+                - (1..5).each do |i|
+                  %li.category-overview-content-block__menu-item
+                    - if i.even?
+                      Taxon #{i}
+                    - else
+                      = link_to "Taxon #{i}", '#', class: 'taxonomy-content-block__menu-link'
+
+  %p Should display 3 columns:
+  .style-guide__example-block
+  .style-guide__example-block
+    .category-overview-content-block
+      .grid
+        - 3.times do |i|
+          .grid__cell.grid__cell--50-at-medium.grid__cell--25-at-wide
+            .category-overview-content-block__container.category-overview-content-block__container--image.category-overview-content-block__container--image-left
+              = image_tag 'workarea/core/placeholder.png', size: '100x100', class: 'category-overview-content-block__image', role: 'presentation'
+
+            .category-overview-content-block__container.category-overview-content-block__container--content
+              %span.category-overview-content-block__heading Heading text
+              %ul.category-overview-content-block__menu
+                - (1..5).each do |i|
+                  %li.category-overview-content-block__menu-item
+                    - if i.even?
+                      Taxon #{i}
+                    - else
+                      = link_to "Taxon #{i}", '#', class: 'taxonomy-content-block__menu-link'

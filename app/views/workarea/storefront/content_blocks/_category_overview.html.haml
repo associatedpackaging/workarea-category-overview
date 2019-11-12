@@ -1,0 +1,23 @@
+.category-overview-content-block
+  .grid
+    - view_model.active_columns.each do |column|
+      .grid__cell{ class: column.grid_cell_classes }
+        .category-overview-content-block__column{ style: column.column_styles }
+          - if column.image.present?
+            .category-overview-content-block__container.category-overview-content-block__container--image{ class: column.image_container_class }
+              - if column.data[:image_link].present?
+                = render_image_with_link(view_model.find_asset(column.image).url, column.data[:alt_text].presence, 'category-overview-content-block', column.data[:image_link])
+              - else
+                = image_tag column.image.url, alt: column.data[:alt_text].presence, class: 'category-overview-content-block__image', role: 'presentation'
+
+          .category-overview-content-block__container.category-overview-content-block__container--content
+            - if column.data[:header].present?
+              %span.category-overview-content-block__heading= column.data[:header]
+
+            %ul.category-overview-content-block__menu
+              - column.taxons.each do |taxon|
+                %li.category-overview-content-block__menu-item
+                  - if taxon.placeholder?
+                    = taxon.name
+                  - else
+                    = link_to taxon.name, storefront_path_for(taxon), class: 'category-overview-content-block__menu-link'
