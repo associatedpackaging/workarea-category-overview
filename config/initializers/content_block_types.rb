@@ -1,4 +1,4 @@
-Workarea::Content.define_content_block_types do
+Workarea.define_content_block_types do
   block_type "Category Overview" do
     description "Columnar content block for displaying categories with images."
     view_model "Workarea::Storefront::ContentBlocks::CategoryOverviewViewModel"
